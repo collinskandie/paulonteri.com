@@ -1,13 +1,11 @@
 import siteMetadata from '@/data/siteMetadata'
 import { kebabCase } from '@/lib/utils'
-import { getAllTags } from '@/lib/tags'
 import Tag from '@/components/Tag'
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
 
 export async function getStaticProps() {
-  const tags = await getAllTags('blog')
-
+  const tags = siteMetadata.tags
   return { props: { tags } }
 }
 

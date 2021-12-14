@@ -1,5 +1,4 @@
 import tinytime from 'tinytime'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import Tag from '@/components/Tag'
 import Link from '@/components/Link'
@@ -9,8 +8,7 @@ const MAX_DISPLAY = 5
 const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
+  const posts = siteMetadata.postsList
   return { props: { posts } }
 }
 

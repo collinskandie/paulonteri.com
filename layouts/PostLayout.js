@@ -35,6 +35,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             </div>
           </div>
         </header>
+
         <div
           className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
           style={{ gridTemplateRows: 'auto 1fr' }}
@@ -62,16 +63,19 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               </ul>
             </dd>
           </dl>
+
           <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
+            {/* content */}
             <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
             <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
               <Link href={discussUrl(slug)} rel="nofollow">
                 {'Discuss on Twitter'}
               </Link>
-              {` • `}
-              <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+              {/* {` • `}
+              <Link href={editUrl(fileName)}>{'View on GitHub'}</Link> */}
             </div>
           </div>
+
           <footer className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
             {tags && (
               <div className="py-4 xl:py-8">
@@ -85,7 +89,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </div>
               </div>
             )}
-            {(next || prev) && (
+            {/* {(next || prev) && (
               <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                 {prev && (
                   <div>
@@ -108,7 +112,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
             <div className="pt-4 xl:pt-8">
               <Link
                 href="/blog"
